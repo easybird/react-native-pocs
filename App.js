@@ -2,6 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { ChatWithUs } from "./ChatWithUs";
 import { ChatWithUsPart2 } from "./ChatWithUsPart2";
+
+const MESSENGER_THREAD_ID = "1402123856538531";
+
 export default class App extends React.Component {
   parseUrl = url =>
     url && url.replace("https://www.messenger.com/t/", "https://m.me/");
@@ -10,17 +13,18 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <Text style={styles.title}>Test messenger</Text>
+          <Text style={styles.title}>Test deep linking to messenger</Text>
         </View>
-        <View>
-          <Text>Open up App.js to start working on your app!</Text>
-          <Text>Changes you make will automatically reload.</Text>
-          <ChatWithUs url={"https://www.messenger.com/t/1402123856538531"} />
-          <ChatWithUs />
-          <ChatWithUsPart2 />
+        <View style={{ margin: 20 }}>
+          <Text>
+            Open up App.js and change the MESSENGER_THREAD_ID to a thread that
+            belongs to you.
+          </Text>
           <ChatWithUs
-            url={"fb-messenger-public://user-thread/1402123856538531"}
+            url={`https://www.messenger.com/t/${MESSENGER_THREAD_ID}`}
           />
+          <ChatWithUs url={`https://m.me/${MESSENGER_THREAD_ID}`} />
+          <ChatWithUsPart2 url={MESSENGER_THREAD_ID} />
         </View>
       </View>
     );

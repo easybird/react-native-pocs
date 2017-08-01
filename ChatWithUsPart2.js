@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
   }
 });
 
-const onPress = () => {
-  const url =
+const onPress = url => {
+  const link =
     Platform.OS === "ios"
-      ? "fb-messenger-public://user-thread/1402123856538531"
-      : "fb-messenger://user-thread/1402123856538531";
+      ? `fb-messenger-public://user-thread/${url}`
+      : `fb-messenger://user-thread/${url}`;
   const appName =
     Platform.OS === "ios" ? "fb-messenger-public" : "fb-messenger";
-  AppLink.maybeOpenURL(url, {
+  AppLink.maybeOpenURL(link, {
     appName,
     appStoreId: "id454638411",
     playStoreId: "com.facebook.orca"
@@ -46,14 +46,14 @@ const onPress = () => {
     });
 };
 export const ChatWithUsPart2 = ({
-  url = "ChatWithUsPart2",
-  title
+  url,
+  title = "This link works For iOS --- Not For Android Yet.."
 }: {
   url: ?string,
   title: string
 }) =>
-  <TouchableOpacity onPress={onPress} style={styles.container}>
+  <TouchableOpacity onPress={() => onPress(url)} style={styles.container}>
     <Text style={styles.textStyle}>
-      {url}
+      {title}
     </Text>
   </TouchableOpacity>;
