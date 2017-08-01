@@ -1,17 +1,9 @@
 # My React Native POCS
 
 ### What is this branch about?
+This is the development branch, to check out my POC's, check the specific branches:
 
-#### Deep linking to Facebook Messenger conversation
-This branch is used to test the deep link to the Messenger App. This is not officially supported by Facebook, but there is a workaround which is at least working for IOS. For Android I didn't manage to get it work.
-
-Below you can find some links concerning the topic:
-
-* [facebook-messenger-app-link-ios](https://stackoverflow.com/questions/27285373/facebook-messenger-app-link-ios#comment43038754_27285373)
-* [deep-linking-to-facebook-messenger](https://stackoverflow.com/questions/31777075/deep-linking-to-facebook-messenger/32060864)
-* [how-to-open-facebook-messenger-chat-window-using-app-scoped-id-in-android](https://stackoverflow.com/questions/33468335/how-to-open-facebook-messenger-chat-window-using-app-scoped-id-in-android)
-* [custom-uri-schemes-for-the-facebook-messenger](https://stackoverflow.com/questions/25467445/custom-uri-schemes-for-the-facebook-messenger)
-* [openning-deep-link-to-a-facebook-messenger-on-andr.html](http://answers.unity3d.com/questions/1255913/openning-deep-link-to-a-facebook-messenger-on-andr.html)
+* [Facebook messenger deep linking](https://github.com/easybird/react-native-pocs/tree/deep-link-to-messenger)
 
 ## Available Scripts
 ### `npm start`
